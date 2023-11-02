@@ -16,11 +16,11 @@ function findLongestWord(str) {
   // this line defines the variable longestWordLength and sets it at a starting point of the minimum of 0 letters long
   var longestWordLength = 0;
   // this next bit is a for loop
-  // this line starts the for loop, declaring a counter variable of i, setting it at a starting point of 0, setting its maximum value to one less than the number of words in the array words - in order to capture all the words, as counting will start with 0, not 1, and then setting the counter variable to increase each time the loop runs to move to the next word
+  // this line starts the for loop, declaring a counter variable of i, setting it at a starting point of 0, setting its maximum value to one less than the number of words in the array words - in order to capture all the words, as counting will start with 0, not 1 - and then setting the counter variable to increase each time the loop runs to move to the next word
   for (var i = 0; i < words.length; i++) {
     // this starts a conditional, checking to see if the length of the currently-analyzed word is longer than the current value of the variable longestWordLength
     if (words[i].length > longestWordLength) {
-      // if the current word length is longer than the longestWordLength, then the variable longestWordLength becomes the number of the length of the current word
+      // if the current word length is longer than the longestWordLength, then the value of the variable longestWordLength becomes the number of the length of the current word
       longestWordLength = words[i].length;
     }
   }

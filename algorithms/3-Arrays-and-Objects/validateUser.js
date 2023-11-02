@@ -17,16 +17,21 @@ Steps
 3. Return true if a matching user is found; false otherwise.
  */
 
-function validateUserCredentials(users, inputUsername, inputPassword) {
-    
-}
+function validateUserCredentials(users, inputUsername, inputPassword) {}
 
 // Example usage
 const registeredUsers = [
-    { username: "user1", password: "password123" },
-    { username: "user2", password: "secretword" },
-    { username: "admin", password: "admin123" }
+  { username: "user1", password: "password123" },
+  { username: "user2", password: "secretword" },
+  { username: "admin", password: "admin123" },
 ];
 const username = "user1";
 const password = "password123";
 console.log(validateUserCredentials(registeredUsers, username, password)); // Output: true
+
+// const ages = [3, 10, 18, 20];
+
+// ages.some(checkAdult);
+// function checkAdult(age) {
+//   return age > 18;
+// }
