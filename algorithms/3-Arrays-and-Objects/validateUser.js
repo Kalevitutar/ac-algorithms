@@ -17,7 +17,13 @@ Steps
 3. Return true if a matching user is found; false otherwise.
  */
 
-function validateUserCredentials(users, inputUsername, inputPassword) {}
+function validateUserCredentials(users, inputUsername, inputPassword) {
+  return users.some(
+    (user) => user.username === inputUsername && user.password === inputPassword
+  );
+}
+
+// users.some(validateUserCredentials);
 
 // Example usage
 const registeredUsers = [
@@ -28,6 +34,17 @@ const registeredUsers = [
 const username = "user1";
 const password = "password123";
 console.log(validateUserCredentials(registeredUsers, username, password)); // Output: true
+
+// return users.some(user => user.username === inputUsername && user.password === inputPassword);
+
+// const fruits = ["apple", "banana", "mango", "guava"];
+
+// function checkAvailability(arr, val) {
+//   return arr.some((arrVal) => val === arrVal);
+// }
+
+// checkAvailability(fruits, "kela"); // false
+// checkAvailability(fruits, "banana"); // true
 
 // const ages = [3, 10, 18, 20];
 
