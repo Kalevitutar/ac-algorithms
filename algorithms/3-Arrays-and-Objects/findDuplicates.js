@@ -20,7 +20,17 @@ Steps:
  */
 
 function hasDuplicates(arr) {
-   
+  let ans = false;
+  let encountered = [arr[0]];
+  for (let i = 1; i < arr.length; i++) {
+    for (let j = 0; j < encountered.length; j++) {
+      if (arr[i] === encountered[j]) {
+        ans = true;
+      }
+    }
+    encountered.push(arr[i]);
+  }
+  console.log(ans);
 }
 
 // Example usage
